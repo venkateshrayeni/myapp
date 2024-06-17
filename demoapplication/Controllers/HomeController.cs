@@ -40,7 +40,7 @@ namespace demoapplication.Controllers
         }
         private void ConnectDB(string userIp)
         {
-            string connectionString = "Server=tcp:rayeni-poc-sql1.database.windows.net,1433;Database=pocDb;User ID=venkat;Password=sqlDb@6!;Encrypt=true;Connection Timeout=30;";
+            string connectionString = "Server=tcp:rayeni-poc-sql1.database.windows.net,1433;Database=pocDb;User ID=venkat;Password='';Encrypt=true;Connection Timeout=30;";
             SqlConnection conn = new SqlConnection(connectionString);
             string sql = "insert into UserData(IPAddress) values ('"+ userIp + "')";
             try
